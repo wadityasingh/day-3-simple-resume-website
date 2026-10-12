@@ -1,0 +1,407 @@
+
+:root {
+  --color-page-bg: #f8fafc;
+  --color-card-bg: #ffffff;
+  --color-text-main: #1e293b;
+  --color-text-muted: #475569;
+  --color-heading: #0f2c59;        
+  --color-border: #cbd5e1;
+  --color-border-subtle: #e2e8f0;
+  --color-link: #0369a1;
+  --color-link-hover: #075985;
+  --color-btn-bg: #0f2c59;
+  --color-btn-text: #ffffff;
+  --color-btn-hover: #1e3a8a;
+  
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --max-width: 840px;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  background-color: var(--color-page-bg);
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+/* --------------------------------------------------------------------------
+   2. Main Container
+   -------------------------------------------------------------------------- */
+.resume-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. Header Section
+   -------------------------------------------------------------------------- */
+.resume-header {
+  border-bottom: 2px solid var(--color-heading);
+  padding-bottom: 1.5rem;
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.resume-document-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--color-heading);
+  text-transform: uppercase;
+  border: 1px solid var(--color-heading);
+  padding: 0.2rem 1.25rem;
+  border-radius: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.candidate-name {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--color-heading);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.candidate-degree {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 0.25rem;
+}
+
+.candidate-college {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 0.25rem;
+}
+
+.candidate-location {
+  font-size: 0.925rem;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   4. Section Styles & Typography
+   -------------------------------------------------------------------------- */
+.resume-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  border-bottom: 2px solid var(--color-heading);
+  padding-bottom: 0.35rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.section-content {
+  color: var(--color-text-main);
+}
+
+.objective-text {
+  font-size: 0.975rem;
+  line-height: 1.65;
+  color: var(--color-text-main);
+}
+
+/* --------------------------------------------------------------------------
+   5. Timeline Items (Education & Experience)
+   -------------------------------------------------------------------------- */
+.timeline-item {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px dashed var(--color-border-subtle);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.2rem;
+}
+
+.item-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.item-date {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.item-institution {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.item-detail {
+  font-size: 0.925rem;
+  color: var(--color-text-main);
+}
+
+/* --------------------------------------------------------------------------
+   6. Technical Skills (CSS Grid)
+   -------------------------------------------------------------------------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md) var(--spacing-xl);
+}
+
+.skill-category {
+  background-color: transparent;
+}
+
+.category-title {
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-bottom: 0.4rem;
+}
+
+.skills-list {
+  list-style-type: square;
+  padding-left: 1.25rem;
+  color: var(--color-text-main);
+}
+
+.skills-list li {
+  margin-bottom: 0.25rem;
+  font-size: 0.925rem;
+}
+
+.skills-note {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-top: var(--spacing-md);
+}
+
+/* --------------------------------------------------------------------------
+   7. Projects (CSS Grid Cards)
+   -------------------------------------------------------------------------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.project-card {
+  border: 1px solid var(--color-border-subtle);
+  background-color: #fafbfc;
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.project-btn {
+  display: inline-block;
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px;
+}
+
+.project-btn:hover {
+  background-color: var(--color-btn-hover);
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-main);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.project-url-row {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--color-border-subtle);
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.url-label {
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-right: 0.25rem;
+}
+
+.project-url-link {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.project-url-link:hover {
+  color: var(--color-link-hover);
+}
+
+/* --------------------------------------------------------------------------
+   8. Certifications Section
+   -------------------------------------------------------------------------- */
+.certs-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.cert-item {
+  border: 1px solid var(--color-border-subtle);
+  background-color: #fafbfc;
+  padding: 0.75rem 1rem;
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.2rem;
+}
+
+.cert-title {
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.cert-date {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.cert-issuer {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   9. Footer
+   -------------------------------------------------------------------------- */
+.resume-footer {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   10. Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  body {
+    padding: var(--spacing-sm);
+  }
+
+  .resume-container {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .candidate-name {
+    font-size: 1.85rem;
+  }
+
+  .candidate-college {
+    font-size: 0.95rem;
+  }
+
+  .item-header,
+  .cert-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills-grid,
+  .projects-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   11. Print Styles
+   -------------------------------------------------------------------------- */
+@media print {
+  body {
+    background-color: #ffffff;
+    padding: 0;
+  }
+
+  .resume-container {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .project-btn {
+    border: 1px solid #0f2c59;
+    color: #0f2c59;
+    background-color: transparent;
+  }
+}
