@@ -33,7 +33,7 @@ You can also use the Live Server extension in VS Code to preview the website.
 
 ## Live Website
 
-Add your deployed website link here.
+https://day-3-simple-resume-website.onrender.com
 
 ## What I Learned
 
